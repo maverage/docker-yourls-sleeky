@@ -18,5 +18,5 @@ RUN set -eux; \
 # clean up
     rm sleeky.tar.gz; \
     rm -r "/usr/src/Sleeky-${SLEEKY_VERSION}" \
-chown -R www-data:www-data /usr/src/yourls/sleeky_frontent
-chown -R www-data:www-data /usr/src/yourls/user/plugins/sleeky_backend
+    chown -R www-data:www-data /usr/src/yourls/sleeky_frontent \
+    chown -R www-data:www-data /usr/src/yourls/user/plugins/sleeky_backend
