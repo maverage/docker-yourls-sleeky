@@ -4,7 +4,7 @@ MAINTAINER https://github.com/maverage/docker-yourls-sleeky
 # the following content is inspired by https://github.com/YOURLS/docker-yourls/blob/master/fpm-alpine/Dockerfile
 
 ENV SLEEKY_VERSION 2.1.1
-ENV SLEEKY_SHA256 9ADB685D90F3EEDEAD91C7F948D39112BE59D7DE7CC136BE19CB5F189EBE757E
+ENV SLEEKY_SHA256 9adb685d90f3eedead91c7f948d39112be59d7de7cc136be19cb5f189ebe757e
 
 RUN set -eux; \
     curl -o sleeky.tar.gz -fsSL "https://github.com/Flynntes/Sleeky/archive/v${SLEEKY_VERSION}.tar.gz"; \
