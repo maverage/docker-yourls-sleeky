@@ -12,11 +12,11 @@ RUN set -eux; \
 # upstream tarballs include ./Sleeky-${SLEEKY_VERSION}/ so this gives us /usr/src/Sleeky-${SLEEKY_VERSION}
     tar -xf sleeky.tar.gz -C /usr/src/; \
 # install plugin to /usr/src/yourls, see https://github.com/Flynntes/Sleeky#quick-start
-    mv "/usr/src/Sleeky-${SLEEKY_VERSION}/sleeky_frontend" /usr/src/yourls; \
-    mv "/usr/src/Sleeky-${SLEEKY_VERSION}/sleeky_backend" /usr/src/yourls/user/plugins; \
+    mv "/usr/src/Sleeky-${SLEEKY_VERSION}/sleeky-frontend" /usr/src/yourls; \
+    mv "/usr/src/Sleeky-${SLEEKY_VERSION}/sleeky-backend" /usr/src/yourls/user/plugins; \
 # future: automatically activate plugin? Currently needs to be activated manually in admin panel
 # clean up
     rm sleeky.tar.gz; \
     rm -r "/usr/src/Sleeky-${SLEEKY_VERSION}"; \
-    chown -R www-data:www-data /usr/src/yourls/sleeky_frontend; \
-    chown -R www-data:www-data /usr/src/yourls/user/plugins/sleeky_backend
+    chown -R www-data:www-data /usr/src/yourls/sleeky-frontend; \
+    chown -R www-data:www-data /usr/src/yourls/user/plugins/sleeky-backend
