@@ -6,8 +6,8 @@ MAINTAINER https://github.com/maverage/docker-yourls-sleeky
 ENV SLEEKY_VERSION 2.1.1
 ENV SLEEKY_SHA256 9ADB685D90F3EEDEAD91C7F948D39112BE59D7DE7CC136BE19CB5F189EBE757E
 
-RUN set -euxv; \
-    curl -o sleeky.tar.gz -fsSL "https://github.com/Flynntes/Sleeky/archive/$v{SLEEKY_VERSION}.tar.gz"; \
+RUN set -eux; \
+    curl -o sleeky.tar.gz -fsSL "https://github.com/Flynntes/Sleeky/archive/v${SLEEKY_VERSION}.tar.gz"; \
     echo "$SLEEKY_SHA256 *sleeky.tar.gz" | sha256sum -c -; \
 # upstream tarballs include ./Sleeky-${SLEEKY_VERSION}/ so this gives us /usr/src/Sleeky-${SLEEKY_VERSION}
     tar -xf sleeky.tar.gz -C /usr/src/; \
